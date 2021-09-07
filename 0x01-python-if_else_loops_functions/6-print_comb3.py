@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+i = 0
+j = 0
+
+while(i < 9):
+    j = 1 + i
+    while(j < 10):
+        if (i < 8):
+            print("{:d}{:d}, ".format(i, j), end='');
+        else:
+            print("{:d}{:d}, ".format(i, j));
+        j += 1
+    i += 1
