@@ -8,6 +8,6 @@ while(i < 9):
         if (i < 8):
             print("{:d}{:d}, ".format(i, j), end='')
         else:
-            print("{:d}{:d}, ".format(i, j))
+            print("{:d}{:d}".format(i, j))
         j += 1
     i += 1
