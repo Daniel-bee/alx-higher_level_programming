@@ -11,5 +11,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
         else:
             tuple_b = tuple_b[0], 0
 
-    sum_ = tuple(map(lambda a, b: a + b, tuple_a, tuple_b))
+    sum_ = tuple(map(sum, zip(tuple_a, tuple_b)))
     return sum_
