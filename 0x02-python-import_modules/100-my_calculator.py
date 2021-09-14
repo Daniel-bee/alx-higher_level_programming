@@ -6,10 +6,8 @@ if __name__ == "__main__":
     if num_args != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-
     op_ = sys.argv[2]
     cal = 0
     if op_ == '+':
