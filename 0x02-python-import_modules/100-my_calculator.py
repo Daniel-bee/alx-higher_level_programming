@@ -8,15 +8,18 @@ if __name__ == "__main__":
         exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-
-    if sys.argv[2] == '+':
-        print("{} {} {} = {}".format(a, sys.argv[2], b, add(a, b)))
-    elif sys.argv[2] == '-':
-        print("{} {} {} = {}".format(a, sys.argv[2], b, sub(a, b)))
-    elif sys.argv[2] == '*':
-        print("{} {} {} = {}".format(a, sys.argv[2], b, mul(a, b)))
-    elif sys.argv[2] == '/':
-        print("{} {} {} = {}".format(a, sys.argv[2], b, div(a, b)))
+    cal = 0
+    op_ = sys.argv[2]
+    if op_  == '+':
+        cal = add(a, b)
+    elif op_ == '-':
+        cal = sub(a, b)
+    elif op_ == '*':
+        cal = mul(a, b)
+    elif op_ == '/':
+        cal = div(a, b)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
+
+    print("{} {} {} = {}".format(a, op_, b, cal))
