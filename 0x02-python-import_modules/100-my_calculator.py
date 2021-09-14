@@ -10,7 +10,7 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
     cal = 0
     op_ = sys.argv[2]
-    if op_  == '+':
+    if op_ == '+':
         cal = add(a, b)
     elif op_ == '-':
         cal = sub(a, b)
