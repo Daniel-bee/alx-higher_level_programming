@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 def search_replace(my_list, search, replace):
     new_list = my_list.copy()
     for idx in range(len(my_list)):
