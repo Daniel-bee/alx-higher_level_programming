@@ -1,3 +1,5 @@
+This doctest checks a script that creates a Mylist class.
+Import the module
 >>> MyList = __import__('1-my_list').MyList
 
 Check print_sorted with empty list
