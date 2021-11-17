@@ -1,4 +1,4 @@
--- list top 3
+-- list top 3 row
 SELECT city, AVG(value) as avg_temp
 FROM temperatures
 WHERE month BETWEEN 7 AND 8
