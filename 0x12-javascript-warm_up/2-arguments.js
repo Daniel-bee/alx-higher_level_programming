@@ -8,7 +8,8 @@ args.forEach((val, index) => {
 });
 if (count >= 2) {
   console.log('Argument found');
-}
-if (count === 1) {
+} else if (count === 1) {
   console.log('No argument');
+} else {
+  console.log('Arguments found');
 }
