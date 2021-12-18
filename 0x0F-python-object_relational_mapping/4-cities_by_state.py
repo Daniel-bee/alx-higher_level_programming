@@ -14,7 +14,8 @@ if __name__ == '__main__':
                          db=sys.argv[3])
     cur = db.cursor()
     cur.execute("SELECT C.id, C.name, S.name \
-            FROM states S JOIN cities C\
+            FROM states S, cities C \
+            WHERE S.id  = C.state_id \
             ORDER BY C.id ASC")
     cities = cur.fetchall()
 
