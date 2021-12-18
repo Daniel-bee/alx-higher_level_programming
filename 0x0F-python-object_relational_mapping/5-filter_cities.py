@@ -14,14 +14,14 @@ if __name__ == '__main__':
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT C.id, C.name, S.name \
+    cur.execute("SELECT C.name \
             FROM states S, cities C \
             WHERE S.name  = %s \
             ORDER BY C.id ASC", [sys.argv[4]])
     cities = cur.fetchall()
 
     for city in cities:
-        print(city[1])
+        print(city[0])
 
     cur.close()
     db.close()
