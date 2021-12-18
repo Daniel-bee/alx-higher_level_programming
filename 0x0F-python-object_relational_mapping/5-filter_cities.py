@@ -27,7 +27,7 @@ if __name__ == '__main__':
             print(city[0]+spc, end='')
         else:
             print(city[0], end='')
-        count +=1
+        count += 1
     print()
 
     cur.close()
