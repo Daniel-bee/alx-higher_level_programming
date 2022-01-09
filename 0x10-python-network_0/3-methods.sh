@@ -1,3 +1,3 @@
 #!/bin/bash
 # list of methods
-curl -siX "OPTIONS" -L $1
+curl -siX "OPTIONS"  $1 | wc -c
