@@ -1,3 +1,3 @@
 #!/bin/bash
 # list of methods
-curl -sX "OPTIONS"$1
+curl -sX "OPTIONS" $1
