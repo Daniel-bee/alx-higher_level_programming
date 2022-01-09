@@ -1,3 +1,3 @@
 #!/bin/bash
 # return status code
-curl -sow $1
+curl -o /dev/null -s -w $1
