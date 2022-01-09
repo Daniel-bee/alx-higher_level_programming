@@ -1,3 +1,3 @@
 #!/bin/bash
 #cURL headers
-curl -sX POST -d $1 "X-School-User-Id=98"
+curl -s -X POST -d "X-School-User-Id=98" $1
