@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-list 10 commits of the repository 
+list 10 commits of the repository
 """
 import requests
 from sys import argv
