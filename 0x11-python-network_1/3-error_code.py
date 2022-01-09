@@ -2,13 +2,16 @@
 """
 sends a request to the URL and displays the body of the response
 """
+import sys
+import urllib.parse
 import urllib.request
-from sys import argv
+
 
 if __name__ == "__main__":
-    try:
-        with urllib.request.urlopen(argv[1]) as response:
-            page = response.read()
-            print(page.decode('utf-8'))
-    except urllib.error.HTTPError as e:
-        print(f"Error code: {e.code}")
+
+    value = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(value).encode("ascii")
+
+    request = urllib.request.Request(sys.argv[1], data)
+    with urllib.request.urlopen(request) as response:
+        print(response.read().decode("utf-8"))
