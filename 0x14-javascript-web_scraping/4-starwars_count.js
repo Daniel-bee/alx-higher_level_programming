@@ -12,7 +12,7 @@ request(options, (error, response, body) => {
   body.results.forEach(function (data) {
     const len = data.characters.length;
     for (let i = 0; i < len; i++) {
-      if (data.characters[i] == 'https://swapi-api.hbtn.io/api/people/18/') count += 1;
+      if (data.characters[i].includes('/18/')) count += 1;
     }
   });
   console.log(`${count}`);
