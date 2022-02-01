@@ -2,8 +2,7 @@
 const request = require('request');
 const options = {
   url: process.argv[2],
-  method: 'GET',
-  json: true
+  method: 'GET'
 };
 const fs = require('fs');
 request(options, (error, response, body) => {
