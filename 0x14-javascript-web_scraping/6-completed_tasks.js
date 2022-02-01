@@ -17,13 +17,12 @@ request(options, (error, response, body) => {
     }
     return count;
   }
-  json[firstId] = count(firstId);
+  json[firstId] = parseInt(count(firstId));
   for (let i = 1; i < obj.length; i++) {
     if (firstId !== obj[i].userId) {
-      json[obj[i].userId] = count(obj[i].userId);
+      json[obj[i].userId] = parseInt(count(obj[i].userId));
       firstId = obj[i].userId;
     }
   }
-  json = JSON.stringify(json)
   console.log(json);
 });
