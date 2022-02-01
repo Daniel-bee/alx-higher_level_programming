@@ -14,7 +14,7 @@ request(options, (error, response, body) => {
   for (let j = 0; j < obj.results.length ;j++) {
     const len = obj.results[j].characters.length;
     for (let i = 0; i < len; i++) {
-      if (obj.results[j].characters[i] === 'https://swapi-api.hbtn.io/api/people/18/') count += 1;
+      if (obj.results[j].characters[i].includes('/18/')) count += 1;
     }
   }
   console.log(`${count}`);
