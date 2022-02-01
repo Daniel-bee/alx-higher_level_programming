@@ -5,7 +5,8 @@ const options = {
   url: process.argv[2],
   method: 'GET'
 };
-
+let i = 0;
+let j = 0;
 request(options, (error, response, body) => {
   if (error) console.log(error);
   let count = 0;
