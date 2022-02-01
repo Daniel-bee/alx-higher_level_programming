@@ -6,14 +6,14 @@ const options = {
 };
 request(options, (error, response, body) => {
   if (error) console.log(error);
-    const obj = JSON.parse(body);
-    let json = {};
-    obj.forEach((ob) => {
-      if (ob.completed && json[ob.userId] === undefined) {
-        json[ob.userId] = 1;
-      } else if (ob.completed) {
-        json[ob.userId] += 1;
-      }
-    });
-    console.log(json); 
+  const obj = JSON.parse(body);
+  const json = {};
+  obj.forEach((ob) => {
+    if (ob.completed && json[ob.userId] === undefined) {
+      json[ob.userId] = 1;
+    } else if (ob.completed) {
+      json[ob.userId] += 1;
+    }
+  });
+  console.log(json);
 });
