@@ -2,14 +2,13 @@
 
 const request = require('request');
 const options = {
-  url: process.argv[2],
-  method: 'GET'
+  url: process.argv[2]
 };
 request(options, (error, response, body) => {
   if (error) console.log(error);
   const obj = JSON.parse(body);
   let firstId = obj[0].userId;
-  let json = {};
+  const json = {};
   function count (id) {
     let count = 0;
     for (let i = 0; i < obj.length; i++) {
@@ -17,10 +16,13 @@ request(options, (error, response, body) => {
     }
     return count;
   }
+  let key = '';
+  key = firstId;
   json[firstId] = parseInt(count(firstId));
   for (let i = 1; i < obj.length; i++) {
     if (firstId !== obj[i].userId) {
-      json[obj[i].userId] = parseInt(count(obj[i].userId));
+      key = obj[i].userId;
+      json[key] = parseInt(count(obj[i].userId));
       firstId = obj[i].userId;
     }
   }
