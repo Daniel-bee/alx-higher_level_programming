@@ -9,7 +9,7 @@ request(options, (error, response, body) => {
   if (error) console.log(error);
   const obj = JSON.parse(body);
   let firstId = obj[0].userId;
-  const json = {};
+  let json = {};
   function count (id) {
     let count = 0;
     for (let i = 0; i < obj.length; i++) {
@@ -24,5 +24,6 @@ request(options, (error, response, body) => {
       firstId = obj[i].userId;
     }
   }
+  json = JSON.stringify(json)
   console.log(json);
 });
