@@ -16,5 +16,5 @@ request(options, (error, response, body) => {
       if (data.characters[i] === 'https://swapi-api.hbtn.io/api/people/18/') count += 1;
     }
   });
-  console.log(count);
+  console.log(`${count}`);
 });
