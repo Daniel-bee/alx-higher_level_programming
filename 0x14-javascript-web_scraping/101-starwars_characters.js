@@ -18,7 +18,7 @@ request(options, (error, response, body) => {
   }
   let url = "";
   for (let i = 0; i < obj.characters.length; i++) {
-    key = obj.characters[i];
-    order(key);
+    url = obj.characters[i];
+    order(url);
   }
 });
