@@ -9,11 +9,16 @@ const options = {
 request(options, (error, response, body) => {
   if (error) console.log(error);
   const obj = JSON.parse(body);
-  for (let i = 0; i < obj.characters.length; i++) {
-    request(obj.characters[i], (error, response, body) => {
+  function order (url) {
+    request(url, (error, response, body) => {
       if (error) console.log(error);
       const people = JSON.parse(body);
       console.log(people.name);
     });
+  }
+  let url = "";
+  for (let i = 0; i < obj.characters.length; i++) {
+    key = obj.characters[i];
+    order(key);
   }
 });
