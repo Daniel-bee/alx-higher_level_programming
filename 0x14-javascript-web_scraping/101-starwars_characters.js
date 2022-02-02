@@ -24,7 +24,7 @@ request(options, (error, response, body) => {
       const arr = [];
       arr.push(people);
       arr.sort(function (a, b) {
-        return a.obj.characters[i] - b.people.url;
+        return (a[obj.characters[i]] > b[obj.characters[i]]) ? 1 : ((a[obj.characters[i]] < b[obj.characters[i]]) ? -1 : 0);
       });
       console.log(arr[0].name);
     });
