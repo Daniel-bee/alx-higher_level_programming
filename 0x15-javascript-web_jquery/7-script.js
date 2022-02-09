@@ -4,6 +4,6 @@ const options = {
   method: 'GET'
 };
 
-request(options, (response) => {
+request(options, function (response) {
   $('#character').text(response.name);
 });
